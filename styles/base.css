@@ -1,0 +1,43 @@
+/* основные стили и общие правил оформления, применяемые ко всем страницам сайта */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html,
+
+body {
+    font-family: 'SSP-Regular', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 130%;
+    background-color: #E0DEDA;
+    color: #162126;
+    overflow-x: hidden;
+}
+
+.header__left {
+    font-family: 'PD-Bold', Arial, sans-serif;
+    font-size: 45px;
+    line-height: 50%;
+    color: #162126;
+    overflow-x: hidden;
+}
+
+.header__logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-text {
+    transform: scaleY(2); /* Масштабирование по оси Y */
+    display: inline-block; ;
+    margin-right: 10px; /* Space between text and icon */
+}
+
+.header__logo-icon {
+    height: 250px; /* Match the height of the h1 text */
+    width: auto;
+}
+
+

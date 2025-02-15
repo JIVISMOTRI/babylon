@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'PD-Bold';
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/PlayfairDisplaySC/PlayfairDisplaySC-Bold.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: 'SSP-Regular';
+    font-display: swap;
+    src: url('../fonts/SourceSansPro/SourceSansPro-Regular.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: 'SSP-Semibold';
+    font-display: swap;
+    src: url('../fonts/SourceSansPro/SourceSansPro-SemiBold.woff2') format('woff2'),
+}

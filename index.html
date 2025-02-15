@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BABYLON - Translation Agency</title>
+    <title>BABYLON</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <!-- Special Offer Banner -->
@@ -11,10 +13,13 @@
         <p class="special-offer-banner__text">SPECIAL OFFER - СКИДКА НА ПЕРВЫЙ ЗАКАЗ</p>
     </div>
     <!-- Header -->
-    <header class="header">
+    <header class="header container">
         <div class="header__left">
-            <h2 class="header__logo">TRANSLATION AGENCY</h2>
-            <h1 class="header__logo">BABYLON</h1>
+            <h2>TRANSLATION AGENCY</h2>
+            <div class="header__logo-container">
+                <h1 class="header__logo-text">BABYLON</h1>
+                <img class="header__logo-icon" src="images/LOGO.webp" alt="site-logo">
+            </div>
         </div>
         <div class="header__center">
             <p class="header__contact">88005553535 - Звонки по России</p>
@@ -23,7 +28,7 @@
         </div>
         <div class="header__right">
             <p class="header__language">Switch on necessary language</p>
-            <button class="header__button"><img src="images/language_icon.png" alt="Switch Language" width="20" height="20"></button>
+            <button class="header__button"><img src="images/language_icon.png" alt="Switch Language"></button>
         </div>
 
         <!-- header Navigation Menu -->
@@ -41,38 +46,39 @@
         </nav>
     </header>
 
-    <!-- Sidebar -->
-    <aside class="aside">
-        <div class="aside__search-panel">
-            <input type="text" placeholder="Поиск по сайту" class="aside__search-input">
-        </div>
-        <div class="aside__menu">
-            <ul class="menu-2">
-                <li class="menu-2__item"><a href="#" class="menu-2__link">Письменный перевод</a></li>
-                <li class="menu-2__item"><a href="#" class="menu-2__link">Устный перевод</a></li>
-                <li class="menu-2__item"><a href="#" class="menu-2__link">Перевод документов</a></li>
-                <li class="menu-2__item"><a href="#" class="menu-2__link">Экспертиза перевода</a></li>
-                <li class="menu-2__item"><a href="#" class="menu-2__link">Нотариальный перевод</a></li>
-                <li class="menu-2__item"><a href="#" class="menu-2__link">Легализация документов</a></li>
-                <li class="menu-2__item"><a href="#" class="menu-2__link">Апостиль</a></li>
-                <li class="menu-2__item"><a href="#" class="menu-2__link">Истребование документов</a></li>
-                <li class="menu-2__item"><a href="#" class="menu-2__link">Миграционные услуги</a></li>
-                <li class="menu-2__item"><a href="#" class="menu-2__link">Языки перевода</a></li>
-                <li class="menu-2__item"><a href="#" class="menu-2__link">Полезная информация</a></li>
-                <li class="menu-2__item"><a href="#" class="menu-2__link">Вопросы и ответы</a></li>
-            </ul>
-        </div>
-        <div class="aside__additional">
-            <p class="aside__additional aside__additional--blog"><a href="#" class="aside__additional__link">Читайте наш блог</a></p>
-            <p class="aside__additional aside__additional--tests"><a href="#" class="aside__additional__link">Проходите тесты</a></p>
-            <p class="aside__additional aside__additional--vk"><a href="#" class="aside__additional__link">В Контакте</a></p>
-            <p class="aside__additional aside__additional--specials"><a href="#" class="aside__additional__link">Акции</a></p>
-            <p class="aside__additional aside__additional--calculate"><a href="#" class="aside__additional__link">Узнать стоимость</a></p>
-        </div>
-    </aside>
-
     <!-- Main Content Area -->
-    <main class="main-content">
+    <main class="main-content container">
+        
+        <!-- Sidebar -->
+        <aside class="aside">
+            <div class="aside__search-panel">
+                <input type="text" placeholder="Поиск по сайту" class="aside__search-input">
+            </div>
+            <div class="aside__menu">
+                <ul class="menu-2">
+                    <li class="menu-2__item"><a href="#" class="menu-2__link">Письменный перевод</a></li>
+                    <li class="menu-2__item"><a href="#" class="menu-2__link">Устный перевод</a></li>
+                    <li class="menu-2__item"><a href="#" class="menu-2__link">Перевод документов</a></li>
+                    <li class="menu-2__item"><a href="#" class="menu-2__link">Экспертиза перевода</a></li>
+                    <li class="menu-2__item"><a href="#" class="menu-2__link">Нотариальный перевод</a></li>
+                    <li class="menu-2__item"><a href="#" class="menu-2__link">Легализация документов</a></li>
+                    <li class="menu-2__item"><a href="#" class="menu-2__link">Апостиль</a></li>
+                    <li class="menu-2__item"><a href="#" class="menu-2__link">Истребование документов</a></li>
+                    <li class="menu-2__item"><a href="#" class="menu-2__link">Миграционные услуги</a></li>
+                    <li class="menu-2__item"><a href="#" class="menu-2__link">Языки перевода</a></li>
+                    <li class="menu-2__item"><a href="#" class="menu-2__link">Полезная информация</a></li>
+                    <li class="menu-2__item"><a href="#" class="menu-2__link">Вопросы и ответы</a></li>
+                </ul>
+            </div>
+            <div class="aside__additional">
+                <p class="aside__additional aside__additional--blog"><a href="#" class="aside__additional__link">Читайте наш блог</a></p>
+                <p class="aside__additional aside__additional--tests"><a href="#" class="aside__additional__link">Проходите тесты</a></p>
+                <p class="aside__additional aside__additional--vk"><a href="#" class="aside__additional__link">В Контакте</a></p>
+                <p class="aside__additional aside__additional--specials"><a href="#" class="aside__additional__link">Акции</a></p>
+                <p class="aside__additional aside__additional--calculate"><a href="#" class="aside__additional__link">Узнать стоимость</a></p>
+            </div>
+        </aside>
+
         <!-- Причины выбрать нас -->
         <section class="reasons">
             <img class="reasons__img" src="images/reason_5.webp" alt="time" width="200" height="150">
@@ -101,59 +107,60 @@
                 <button class="description__buttons description__buttons--pay">ОПЛАТИТЬ</button>
             </div>
         </section>
-    </main>
     
-      <!-- Мы -->
-      <section class="us">
-          <h3 class="us__title">Наша команда:</h3>
-          <div class="team">
-              <div class="team__member">
-                  <img class="team__img" src="images/team_1.webp" alt="leader" width="200" height="300">
-                  <p class="team__name">Яроха Егор</p>
-                  <p class="team__description">Основатель, главный редактор</p>
-              </div>
-              <div class="team__member">
-                  <img class="team__img" src="images/team_2.webp" alt="manager" width="200" height="300">
-                  <p class="team__name">Кузнецова Анна</p>
-                  <p class="team__description">Менеджер по работе с клиентами</p>
-              </div>
-              <div class="team__member">
-                  <img class="team__img" src="images/team_3.webp" alt="translator" width="200" height="300">
-                  <p class="team__name">Смирнова Елена</p>
-                  <p class="team__description">Переводчик</p>
-              </div>
-              <div class="team__member">
-                  <img class="team__img" src="images/team_4.webp" alt="translator" width="200" height="300">
-                  <p class="team__name">Федоров Владимир</p>
-                  <p class="team__description">Переводчик</p>
-              </div>
-          </div>
-          <h3 class="us__title">Наш офис:</h3>
-          <div class="office">
-              <div class="location">
-                  <img class="location__img" src="images/office_outside.webp" alt="office" width="200" height="150">
-                  <p class="location__address">г. Йошкар-Ола, ул. Кремлевская, 44</p>
-              </div>
-              <div class="appearance">
-                <div class="appearance__photo">
-                    <img class="appearance__img" src="images/office_2.webp" alt="office-outside" width="200" height="150">
-                    <p class="appearance__description">Так выглядит наш офис снаружи</p>
-                </div>
-                <div class="appearance__photo">
-                    <img class="appearance__img" src="images/office_3.webp" alt="office-inside" width="200" height="150">
-                    <p class="appearance__description">Клиентская зона</p>
-                </div>
-              </div>
-          </div>
-      </section>
-      <footer class="footer">
-            <p class="footer__text">© 2021 BABYLON - Translation Agency</p>
-            <p class="footer__about"># Яроха Егор Евгеньевич
-                - ЛВ-21
-                - Лингвистика
-                - Факультет иностранных языков
-                # Проект:
-                BABYLON Translation Agency - сайт бюро переводов.</p>
-      </footer>
+    <!-- Мы -->
+    <section class="us">
+        <h3 class="us__title">Наша команда:</h3>
+        <div class="team">
+            <div class="team__member">
+                <img class="team__img" src="images/team_1.webp" alt="leader" width="200" height="300">
+                <p class="team__name">Яроха Егор</p>
+                <p class="team__description">Основатель, главный редактор</p>
+            </div>
+            <div class="team__member">
+                <img class="team__img" src="images/team_2.webp" alt="manager" width="200" height="300">
+                <p class="team__name">Кузнецова Анна</p>
+                <p class="team__description">Менеджер по работе с клиентами</p>
+            </div>
+            <div class="team__member">
+                <img class="team__img" src="images/team_3.webp" alt="translator" width="200" height="300">
+                <p class="team__name">Смирнова Елена</p>
+                <p class="team__description">Переводчик</p>
+            </div>
+            <div class="team__member">
+                <img class="team__img" src="images/team_4.webp" alt="translator" width="200" height="300">
+                <p class="team__name">Федоров Владимир</p>
+                <p class="team__description">Переводчик</p>
+            </div>
+        </div>
+        <h3 class="us__title">Наш офис:</h3>
+        <div class="office">
+            <div class="location">
+                <img class="location__img" src="images/office_outside.webp" alt="office" width="200" height="150">
+                <p class="location__address">г. Йошкар-Ола, ул. Кремлевская, 44</p>
+            </div>
+            <div class="appearance">
+            <div class="appearance__photo">
+                <img class="appearance__img" src="images/office_2.webp" alt="office-outside" width="200" height="150">
+                <p class="appearance__description">Так выглядит наш офис снаружи</p>
+            </div>
+            <div class="appearance__photo">
+                <img class="appearance__img" src="images/office_3.webp" alt="office-inside" width="200" height="150">
+                <p class="appearance__description">Клиентская зона</p>
+            </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer class="footer container">
+        <p class="footer__text">© 2021 BABYLON - Translation Agency</p>
+        <p class="footer__about"># Яроха Егор Евгеньевич
+            - ЛВ-21
+            - Лингвистика
+            - Факультет иностранных языков
+            # Проект:
+            BABYLON Translation Agency - сайт бюро переводов.</p>
+    </footer>
 </body>
 </html>
