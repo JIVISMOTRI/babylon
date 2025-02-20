@@ -14,21 +14,28 @@
     </div>
     <!-- Header -->
     <header class="header container">
-        <div class="header__left">
+        <a class="header__left" href="index.html">
             <h2>TRANSLATION AGENCY</h2>
             <div class="header__logo-container">
+                <img class="header__logo-icon" src="images/LOGO.jpg" alt="site-logo">
                 <h1 class="header__logo-text">BABYLON</h1>
-                <img class="header__logo-icon" src="images/LOGO.webp" alt="site-logo">
             </div>
-        </div>
+        </a>
         <div class="header__center">
-            <p class="header__contact">88005553535 - Звонки по России</p>
-            <p class="header__contact">mail@babylonta.com</p>
-            <p class="header__contact">89042281988 - TG, WA, Viber</p>
+            <a class="header__center-number" href="#">88005553535
+                <div class="header__center-icons">
+                    <img src="images/header/CALL.png" alt="telephone_image">
+                    <img src="images/header/TG.png" alt="telegram_icon">
+                    <img src="images/header/WA.png" alt="whatsapp_icon">
+                </div>
+            </a>
+            <a class="header__center-mail" href="#">mail@babylonta.com
+                <img class="header__center-icons" src="images/header/mail (2).png" alt="mail_icon">
+            </a>
         </div>
         <div class="header__right">
-            <p class="header__language">Switch on necessary language</p>
-            <button class="header__button"><img src="images/language_icon.png" alt="Switch Language"></button>
+            <img class="header__right-icon" src="images/header/language.png" alt="Switch-Language"></button>
+            <span class="tooltip-text">Switch Language</span>
         </div>
 
         <!-- header Navigation Menu -->
@@ -47,111 +54,119 @@
     </header>
 
     <!-- Main Content Area -->
-    <main class="main-content container">
-        
+    <div class="main-container container">
         <!-- Sidebar -->
         <aside class="aside">
             <div class="aside__search-panel">
                 <input type="text" placeholder="Поиск по сайту" class="aside__search-input">
             </div>
-            <div class="aside__menu">
-                <ul class="menu-2">
-                    <li class="menu-2__item"><a href="#" class="menu-2__link">Письменный перевод</a></li>
-                    <li class="menu-2__item"><a href="#" class="menu-2__link">Устный перевод</a></li>
-                    <li class="menu-2__item"><a href="#" class="menu-2__link">Перевод документов</a></li>
-                    <li class="menu-2__item"><a href="#" class="menu-2__link">Экспертиза перевода</a></li>
-                    <li class="menu-2__item"><a href="#" class="menu-2__link">Нотариальный перевод</a></li>
-                    <li class="menu-2__item"><a href="#" class="menu-2__link">Легализация документов</a></li>
-                    <li class="menu-2__item"><a href="#" class="menu-2__link">Апостиль</a></li>
-                    <li class="menu-2__item"><a href="#" class="menu-2__link">Истребование документов</a></li>
-                    <li class="menu-2__item"><a href="#" class="menu-2__link">Миграционные услуги</a></li>
-                    <li class="menu-2__item"><a href="#" class="menu-2__link">Языки перевода</a></li>
-                    <li class="menu-2__item"><a href="#" class="menu-2__link">Полезная информация</a></li>
-                    <li class="menu-2__item"><a href="#" class="menu-2__link">Вопросы и ответы</a></li>
-                </ul>
-            </div>
-            <div class="aside__additional">
-                <p class="aside__additional aside__additional--blog"><a href="#" class="aside__additional__link">Читайте наш блог</a></p>
-                <p class="aside__additional aside__additional--tests"><a href="#" class="aside__additional__link">Проходите тесты</a></p>
-                <p class="aside__additional aside__additional--vk"><a href="#" class="aside__additional__link">В Контакте</a></p>
-                <p class="aside__additional aside__additional--specials"><a href="#" class="aside__additional__link">Акции</a></p>
-                <p class="aside__additional aside__additional--calculate"><a href="#" class="aside__additional__link">Узнать стоимость</a></p>
-            </div>
+            <ul class="menu-2">
+                <li class="menu-2__item"><a href="#" class="menu-2__link">Письменный перевод</a></li>
+                <li class="menu-2__item"><a href="#" class="menu-2__link">Устный перевод</a></li>
+                <li class="menu-2__item"><a href="#" class="menu-2__link">Перевод документов</a></li>
+                <li class="menu-2__item"><a href="#" class="menu-2__link">Экспертиза перевода</a></li>
+                <li class="menu-2__item"><a href="#" class="menu-2__link">Нотариальный перевод</a></li>
+                <li class="menu-2__item"><a href="#" class="menu-2__link">Легализация документов</a></li>
+                <li class="menu-2__item"><a href="#" class="menu-2__link">Апостиль</a></li>
+                <li class="menu-2__item"><a href="#" class="menu-2__link">Истребование документов</a></li>
+                <li class="menu-2__item"><a href="#" class="menu-2__link">Миграционные услуги</a></li>
+                <li class="menu-2__item"><a href="#" class="menu-2__link">Языки перевода</a></li>
+                <li class="menu-2__item"><a href="#" class="menu-2__link">Полезная информация</a></li>
+                <li class="menu-2__item"><a href="#" class="menu-2__link">Вопросы и ответы</a></li>
+            </ul>
+            <ul class="aside__additional">
+                <li class="aside__additional-item"><a href="#" class="aside__additional__link"><img class="aside__additional-icon" src="images/main/read.png" alt="blog_icon"> Читайте наш блог</a></li>
+                <li class="aside__additional-item"><a href="#" class="aside__additional__link"><img class="aside__additional-icon" src="images/main/test.png" alt="tests_icon"> Проходите тесты</a></li>
+                <li class="aside__additional-item"><a href="#" class="aside__additional__link"><img class="aside__additional-icon" src="images/main/vk.png" alt="vk_icon"> ВКонтакте</a></li>
+                <li class="aside__additional-item"><a href="#" class="aside__additional__link"><img class="aside__additional-icon" src="images/main/special.png" alt="specials_icon"> Акции</a></li>
+                <li class="aside__additional-item"><a href="#" class="aside__additional__link"><img class="aside__additional-icon" src="images/main/cost.png" alt="calculate_icon"> Узнать стоимость</a></li>
+            </ul>
         </aside>
 
-        <!-- Причины выбрать нас -->
-        <section class="reasons">
-            <img class="reasons__img" src="images/reason_5.webp" alt="time" width="200" height="150">
-            <h3 class="reasons__list reasons__list--title">5 причин выбрать нас</h3>
-            <ul class="reasons__list">
-                <li class="reasons__list reasons__list--item">1</li>
-                <li class="reasons__list reasons__list--item">2</li>
-                <li class="reasons__list reasons__list--item">3</li>
-                <li class="reasons__list reasons__list--item">4</li>
-                <li class="reasons__list reasons__list--item">5</li>
-            </ul>
-        </section>
-        <!-- Описание -->
-        <section class="description">
-            <h2 class="description__heading">Бюро переводов «BABYLON»</h2>
-            <p class="description__text">
-                Наше бюро переводов является лучшим на рынке переводческих услуг нашего города. 
-                Безупречная репутация — наше главное достояние. Мы прилагаем все усилия, 
-                чтобы превзойти ожидания клиентов. Офисы компании находятся в Москве и 
-                Йошкар-Оле, но наши постоянные заказчики находятся в десятках городов России 
-                и зарубежья. Современные средства коммуникации позволяют нам оперативно 
-                оказывать услуги перевода клиентам в любой точке земного шара.
-            </p>
-            <div class="description__buttons">
-                <button class="description__buttons description__buttons--calculate">РАССЧИТАТЬ СТОИМОСТЬ</button>
-                <button class="description__buttons description__buttons--pay">ОПЛАТИТЬ</button>
-            </div>
-        </section>
-    
-    <!-- Мы -->
-    <section class="us">
-        <h3 class="us__title">Наша команда:</h3>
-        <div class="team">
-            <div class="team__member">
-                <img class="team__img" src="images/team_1.webp" alt="leader" width="200" height="300">
-                <p class="team__name">Яроха Егор</p>
-                <p class="team__description">Основатель, главный редактор</p>
-            </div>
-            <div class="team__member">
-                <img class="team__img" src="images/team_2.webp" alt="manager" width="200" height="300">
-                <p class="team__name">Кузнецова Анна</p>
-                <p class="team__description">Менеджер по работе с клиентами</p>
-            </div>
-            <div class="team__member">
-                <img class="team__img" src="images/team_3.webp" alt="translator" width="200" height="300">
-                <p class="team__name">Смирнова Елена</p>
-                <p class="team__description">Переводчик</p>
-            </div>
-            <div class="team__member">
-                <img class="team__img" src="images/team_4.webp" alt="translator" width="200" height="300">
-                <p class="team__name">Федоров Владимир</p>
-                <p class="team__description">Переводчик</p>
-            </div>
-        </div>
-        <h3 class="us__title">Наш офис:</h3>
-        <div class="office">
-            <div class="location">
-                <img class="location__img" src="images/office_outside.webp" alt="office" width="200" height="150">
-                <p class="location__address">г. Йошкар-Ола, ул. Кремлевская, 44</p>
-            </div>
-            <div class="appearance">
-            <div class="appearance__photo">
-                <img class="appearance__img" src="images/office_2.webp" alt="office-outside" width="200" height="150">
-                <p class="appearance__description">Так выглядит наш офис снаружи</p>
-            </div>
-            <div class="appearance__photo">
-                <img class="appearance__img" src="images/office_3.webp" alt="office-inside" width="200" height="150">
-                <p class="appearance__description">Клиентская зона</p>
-            </div>
-            </div>
-        </div>
-    </section>
-</main>
+        <main class="main-content">
+            <!-- Причины выбрать нас -->
+            <section class="reasons">
+                <h3 class="reasons__title">5 причин выбрать нас</h3>
+                <img class="reasons__img" src="images/reason_5.webp" alt="time" width="200" height="150">
+                <ul class="reasons__list">
+                    <li class="reasons__list-item">
+                        <a href="#" class="reasons__list-link">1</a>
+                    </li>
+                    <li class="reasons__list-item">
+                        <a href="#" class="reasons__list-link">2</a>
+                    </li>
+                    <li class="reasons__list-item">
+                        <a href="#" class="reasons__list-link">3</a>
+                    </li>
+                    <li class="reasons__list-item">
+                        <a href="#" class="reasons__list-link">4</a>
+                    </li>
+                    <li class="reasons__list-item">
+                        <a href="#" class="reasons__list-link">5</a>
+                        <h4 class="reasons__text">Оперативность в работе</h4>
+                        <p class="reasons__description">Мы прекрасно понимаем, что время — деньги. 
+                            Наши сотрудники всегда доступны для оперативного решения вопросов.</p>
+                    </li>
+                </ul>
+            </section>
+            <!-- Описание -->
+            <section class="description">
+                <h2 class="description__heading">Бюро переводов «BABYLON»</h2>
+                <p class="description__text">
+                    Наше бюро переводов является лучшим на рынке переводческих услуг нашего города. 
+                    Безупречная репутация — наше главное достояние. Мы прилагаем все усилия, 
+                    чтобы превзойти ожидания клиентов. Офисы компании находятся в Москве и 
+                    Йошкар-Оле, но наши постоянные заказчики находятся в десятках городов России 
+                    и зарубежья. Современные средства коммуникации позволяют нам оперативно 
+                    оказывать услуги перевода клиентам в любой точке земного шара.
+                </p>
+                <div class="description__buttons">
+                    <button class="button description__buttons description__buttons--calculate">Рассчитать стоимость</button>
+                </div>
+            </section>
+            <!-- Мы -->
+            <section class="us">
+                <h3 class="us__title us__title-team">Наша команда:</h3>
+                <div class="team">
+                    <div class="team__member">
+                        <img class="team__img" src="images/team/1.jpg" alt="leader" width="200" height="300">
+                        <p class="team__name">Яроха Егор</p>
+                        <p class="team__description">Основатель, главный редактор</p>
+                    </div>
+                    <div class="team__member">
+                        <img class="team__img" src="images/team/2.jpg" alt="manager" width="200" height="300">
+                        <p class="team__name">Кузнецова Анна</p>
+                        <p class="team__description">Менеджер по работе с клиентами</p>
+                    </div>
+                    <div class="team__member">
+                        <img class="team__img" src="images/team/3.jpg" alt="translator" width="200" height="300">
+                        <p class="team__name">Смирнова Елена</p>
+                        <p class="team__description">Переводчик</p>
+                    </div>
+                    <div class="team__member">
+                        <img class="team__img" src="images/team/4.jpg" alt="translator" width="200" height="300">
+                        <p class="team__name">Федорова Юлия</p>
+                        <p class="team__description">Переводчик</p>
+                    </div>
+                </div>
+                <h3 class="us__title us__title-office">Наш офис:</h3>
+                <div class="office">
+                    <div class="office__item">
+                        <img class="location__img" src="images/team/map.png" alt="office">
+                        <p class="appearance__description">г. Йошкар-Ола, ул. Кремлевская, 44</p>
+                    </div>
+                    <div class="office__item">
+                        <img class="location__img" src="images/team/office_outside.jpg" alt="office-outside">
+                        <p class="appearance__description">Так выглядит наш офис снаружи</p>
+                    </div>
+                    <div class="office__item">
+                        <img class="location__img" src="images/team/office_inside.jpg" alt="office-inside">
+                        <p class="appearance__description">Клиентская зона</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 
     <footer class="footer container">
         <p class="footer__text">© 2021 BABYLON - Translation Agency</p>

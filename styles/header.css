@@ -1,0 +1,150 @@
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__left {
+    margin-top: -30px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'PD', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    color: #162126;
+    overflow: hidden;
+    
+}
+
+    .header__logo-container {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-top: -30px;
+    }
+
+    .header__logo-text {
+        transform: scaleY(2); /* Масштабирование по оси Y */
+        
+    }
+
+    .header__logo-icon {
+        height: 150px; /* Match the height of the h1 text */
+        width: auto;
+    }
+
+.header__center {
+    flex-direction: column;
+    display: flex;
+    align-items: center; /*выравнивнивание элемента (гориз)*/
+    
+}
+
+    .header__center-number {
+        font-family: 'SSP', Arial, sans-serif;
+        color: #162126;
+        font-weight: 600;
+        font-size: larger;
+        text-decoration: none; /* deletes_underline */
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .header__center-icons {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        width: 40px;
+        height: auto;
+    }
+
+    .header__center-mail {
+        display: flex;
+        flex-direction: row-reverse;
+        font-family: 'SSP', Arial, sans-serif;
+        flex-wrap: nowrap;
+        font-weight: 600;
+        color: #162126;
+        font-size: larger;
+        text-decoration: none; /* deletes_underline */
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+.header__right {
+    position: relative; /* Для позиционирования всплывающей подсказки */
+    display: flex;
+    align-items: center;
+}
+    /* Стили для иконки */
+    .header__right-icon {
+        cursor: pointer;
+    }
+
+    /* Стили для всплывающей подсказки */
+    .tooltip-text {
+        visibility: hidden;
+        width: 120px;
+        background-color: #162126;
+        color: #e0deda;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%; /* Позиционирование всплывающей подсказки */
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    /* Показать всплывающую подсказку при наведении */
+    .header__right:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+
+.header__menu {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #959a9b;
+    margin-top: 50px;
+}
+
+.menu { 
+    list-style-type: none; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__item {
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+
+.menu__link{ 
+    display: block; 
+    padding: 10px; 
+    
+    color: #162126; 
+    text-decoration: none; /* deletes_underline */
+} 
+
+.menu__item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50%;
+    width: 1px;
+    background-color: #162126; /* Цвет разделительной черты */
+}

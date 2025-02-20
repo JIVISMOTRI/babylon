@@ -1,0 +1,169 @@
+/* Контейнер для aside и main */
+.main-container {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+    align-items: flex-start; /* Выровнять элементы по началу */
+}
+
+/* Стили для aside */
+.aside {
+    margin-top: 50px;
+    flex: 0 0 250px; /* Фиксированная ширина aside */
+    max-height: auto; /* Высота будет зависеть от содержимого */
+}
+.aside__search-panel {
+    padding: 10px; /* Внутренние отступы */
+    background-color: #162126; /* Цвет фона */
+    border-radius: 10px; /* Радиус скругления углов */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+.menu-2 {
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+    background-color: #959a9b;
+    border-radius: 10px;
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 0; /* Убираем внешние отступы */
+}
+.menu-2__item {
+    position: relative; /* Относительное позиционирование */
+    padding: 10px; /* Внутренние отступы */
+    color: #162126; /* Цвет текста */
+}
+.menu-2__link {
+    display: block; /* Блочный элемент */
+    padding: 10px; /* Внутренние отступы */
+    color: #162126; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+
+
+.aside__additional {
+    list-style-type: none;
+}
+.aside__additional-item {
+    display: flex;
+    text-decoration: none;
+}
+.aside__additional__link {
+    font-family: 'SSP', Arial, Helvetica, sans-serif;
+    font-size: larger;
+    text-decoration: none;
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+.aside__additional-icon {
+    width: auto;
+    height: 50px;
+}
+
+
+
+
+.reasons__list {
+    list-style: none; /* Убираем стандартные маркеры списка */
+    padding: 0;
+    display: flex;
+    gap: 10px; /* Расстояние между элементами списка */
+}
+
+.reasons__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reasons__list-link {
+    background: url('../images/main/circle_reasons.png') no-repeat center center; /* Фон в виде кружочка */
+    background-size: contain; /* Масштабируем фон, чтобы он полностью помещался в элемент */
+    width: 50px; /* Ширина элемента списка */
+    height: 50px; /* Высота элемента списка */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px; /* Размер текста */
+    color: #e0deda; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+/* Стили для main */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    flex: 1; /* Занимает оставшееся пространство */
+    padding: 20px; /* Отступы внутри main */
+}
+
+.description__buttons--calculate {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+
+
+.us__title {
+    font-family: 'PD', Arial, sans-serif;
+}
+.team {
+    display: flex;
+    justify-items: center;
+    gap: 50px;
+}
+.team__member {
+    width: 250px; 
+    padding: 15px; 
+    background-color: #72726a; 
+    color: #162126; 
+    box-shadow: 1px 2px 20px 5px #162126;
+    align-items: center;
+    justify-items: center;
+}
+.team__name{ 
+    margin-top: 15px; 
+    margin-bottom: 15px; 
+    font-size: 20px; 
+    font-weight: bold; 
+    text-align: center; 
+} 
+.team__description{ 
+    margin-top: 0; 
+    margin-bottom: 15px; 
+    font-size: 14px; 
+    font-style: italic; 
+}
+
+.us__title-office {
+    display: flex;
+    gap: 50px;
+    margin-left: -250px;
+}
+.office {
+    display: flex;
+    gap: 50px;
+    justify-items: center;
+    margin-left: -250px;
+}
+.office__item {
+    width: 400px; 
+    height: 350px;
+    padding: 15px; 
+    background-color: #72726a; 
+    color: #162126; 
+    box-shadow: 1px 2px 20px 5px #162126;
+}
+.location__img {
+    width: 400px;
+    height: 250px;
+    background-size: cover;
+}
+.appearance__description {
+    font-family: 'SSP', Arial, sans-serif;
+    font-size: large;
+    font-weight: 600;
+}
