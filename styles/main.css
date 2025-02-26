@@ -1,8 +1,9 @@
 /* Контейнер для aside и main */
 .main-container {
     display: flex;
-    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+    flex-wrap: nowrap; /* Позволяет элементам переноситься на новую строку */
     align-items: flex-start; /* Выровнять элементы по началу */
+    gap: 20px; /* Расстояние между элементами */
 }
 
 /* Стили для aside */
@@ -13,9 +14,18 @@
 }
 .aside__search-panel {
     padding: 10px; /* Внутренние отступы */
-    background-color: #162126; /* Цвет фона */
     border-radius: 10px; /* Радиус скругления углов */
     margin-bottom: 10px; /* Отступ снизу */
+}
+.aside__search-input {
+    border-radius: 10px;
+    border-width: 5px;
+    transition: outline 0.3s; /* Плавное изменение цвета при фокусе */
+    transition: scale 0.3s;
+}
+.aside__search-input:focus {
+    outline: 2px solid #162126; /* Цвет обводки при фокусе */
+    scale: 1.1;
 }
 .menu-2 {
     list-style-type: none; /* Убираем стандартные маркеры списка */
@@ -30,15 +40,24 @@
     color: #162126; /* Цвет текста */
 }
 .menu-2__link {
-    display: block; /* Блочный элемент */
+    display: inline-block; /* Блочный элемент */
     padding: 10px; /* Внутренние отступы */
     color: #162126; /* Цвет текста */
     text-decoration: none; /* Убираем подчеркивание */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.menu-2__link:hover {
+    text-decoration: underline;
+    transform: translateX(10px); /* Увеличиваем и немного смещаем вправо */
+}
+.menu-2__link:active {
+    text-decoration: underline;
+    transform: scale(0.7) translateX(-10px); /* Увеличиваем и немного смещаем вправо */
 }
 
 
-
 .aside__additional {
+    padding-left: 0%;
     list-style-type: none;
 }
 .aside__additional-item {
@@ -46,12 +65,21 @@
     text-decoration: none;
 }
 .aside__additional__link {
+    color: #162126;
     font-family: 'SSP', Arial, Helvetica, sans-serif;
     font-size: larger;
     text-decoration: none;
     display: flex;
     text-align: left;
     align-items: center;
+    transition: transform 0.3s;
+}
+.aside__additional__link:hover {
+    transform: scale(1.1);
+    text-shadow: #162126;
+}
+.aside__additional__link:active {
+    transform: scale(0.8);
 }
 .aside__additional-icon {
     width: auto;
@@ -59,21 +87,27 @@
 }
 
 
-
-
+/* Стили для main */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
 .reasons__list {
+    display: flex;
     list-style: none; /* Убираем стандартные маркеры списка */
     padding: 0;
     display: flex;
     gap: 10px; /* Расстояние между элементами списка */
 }
-
 .reasons__list-item {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+.reasons__description {
+    display: flex;
+}
 .reasons__list-link {
     background: url('../images/main/circle_reasons.png') no-repeat center center; /* Фон в виде кружочка */
     background-size: contain; /* Масштабируем фон, чтобы он полностью помещался в элемент */
@@ -86,14 +120,10 @@
     color: #e0deda; /* Цвет текста */
     text-decoration: none; /* Убираем подчеркивание */
 }
-
-/* Стили для main */
-.main-content {
+.description {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    flex: 1; /* Занимает оставшееся пространство */
-    padding: 20px; /* Отступы внутри main */
+    gap: 50px;
 }
 
 .description__buttons--calculate {
@@ -123,6 +153,12 @@
     box-shadow: 1px 2px 20px 5px #162126;
     align-items: center;
     justify-items: center;
+    transition: transform 0.3s;
+    transition: box-shadow 0.3s;
+}
+.team__member:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px 0 #162126;
 }
 .team__name{ 
     margin-top: 15px; 

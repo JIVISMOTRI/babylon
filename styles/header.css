@@ -25,12 +25,9 @@
         text-align: center;
         margin-top: -30px;
     }
-
     .header__logo-text {
         transform: scaleY(2); /* Масштабирование по оси Y */
-        
     }
-
     .header__logo-icon {
         height: 150px; /* Match the height of the h1 text */
         width: auto;
@@ -52,7 +49,6 @@
         align-items: center;
         margin-bottom: 60px;
     }
-
     .header__center-icons {
         display: flex;
         justify-content: space-between;
@@ -60,7 +56,6 @@
         width: 40px;
         height: auto;
     }
-
     .header__center-mail {
         display: flex;
         flex-direction: row-reverse;
@@ -73,7 +68,9 @@
         align-items: center;
         margin-bottom: 40px;
     }
-
+    .header__center-mail:hover {
+        text-decoration: underline;
+    }
 .header__right {
     position: relative; /* Для позиционирования всплывающей подсказки */
     display: flex;
@@ -133,10 +130,31 @@
 .menu__link{ 
     display: block; 
     padding: 10px; 
-    
     color: #162126; 
     text-decoration: none; /* deletes_underline */
-} 
+    transition: transform 0.3s;
+}
+.menu__link:hover {
+    color: #e0deda;
+    transform: scale(1.1);
+}
+.menu__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #162126;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+.menu__link:hover::after {
+    transform: scaleX(1);
+}
+.menu__link:active {
+    transform: scale(0.8);
+}
 
 .menu__item:not(:last-child)::after {
     content: '';
