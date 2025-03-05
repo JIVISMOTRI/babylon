@@ -59,7 +59,7 @@
     .header__center-mail {
         display: flex;
         flex-direction: row-reverse;
-        font-family: 'SSP', Arial, sans-serif;
+        font-family: 'Mont', Arial, sans-serif;
         flex-wrap: nowrap;
         font-weight: 600;
         color: #162126;
