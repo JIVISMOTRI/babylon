@@ -2,12 +2,20 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     /* 
-    1. Старт
-    2. 
+    Начало.
+    Поиск элементов reasons.
+    Создание массива Data.
+    Цикл по элементам reasons:
+        Добавление обработчика click:
+            При клике:
+                Отмена действия по умолчанию.
+                Поиск reasons__details.
+                    Вставка нового HTML-содержимого на основе Data[index].
+Конец. 
     */
     const reasons = document.querySelectorAll(".reasons__list > .reasons__list-item");
     const Data = {
-        // каждая ссылка содержит level (название тарифа), price (цена), description (описание тарифа), button (кнопку для оформления заявки).
+        // описание причин
                     0: {
                         title: 'Лучшие цены на рынке',
                         image: 'images/reason_1.png', 
