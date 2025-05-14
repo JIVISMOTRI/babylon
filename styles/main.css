@@ -110,6 +110,17 @@
 .reasons__description {
     display: flex;
 }
+.reasons__details {
+    display: flex;
+}
+.reasons__text {
+    flex-direction: column;
+    margin-left: 15px; /* Отступ слева */
+}
+.reasons__description {
+    flex-direction: column;
+    margin-left: 15px; /* Отступ слева */
+}
 .reasons__list-link {
     background: url('../images/main/circle_reasons.png') no-repeat center center; /* Фон в виде кружочка */
     background-size: contain; /* Масштабируем фон, чтобы он полностью помещался в элемент */

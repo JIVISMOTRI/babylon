@@ -11,39 +11,46 @@ document.addEventListener("DOMContentLoaded", () => {
                 Отмена действия по умолчанию.
                 Поиск reasons__details.
                     Вставка нового HTML-содержимого на основе Data[index].
-Конец. 
+    Конец. 
     */
     const reasons = document.querySelectorAll(".reasons__list > .reasons__list-item");
     const Data = {
         // описание причин
                     0: {
                         title: 'Лучшие цены на рынке',
-                        image: 'images/reason_1.png', 
+                        image: 'images/reason_0.jpg', 
                         description: 'Там, где речь идет о качественном переводе, у нас нет конкурентов. Наши цены ориентированы на долгосрочное сотрудничество, а прибыль мы предпочитаем увеличивать за счет значительных оборотов.',
                     },
                     1: {
-                        title: '– POBO –',
-                        image: 'images/reason_5.webp', 
-                        description: 'УМК по робототетхнике',
+                        title: 'Быстрота и точность',
+                        image: 'images/reason_1.jpg', 
+                        description: 'В нашем переводческом бюро мы понимаем, насколько важны сроки. Мы гарантируем выполнение ваших заказов точно в срок, без потери качества. Каждое слово и фраза проверяются на точность, чтобы обеспечить вам идеальный результат. Мы знаем, как важно получать точные и своевременные переводы, и именно это мы вам обеспечим',
                     },
                     2: {
-                        title: '– PROG –',
-                        image: 'images/reason_5.webp', 
-                        description: 'УМК по программированию',
+                        title: 'Профессионализм и опыт',
+                        image: 'images/reason_2.jpg', 
+                        description: 'Наше переводческое бюро состоит из высококвалифицированных специалистов, каждый из которых обладает богатым опытом в своей области. Мы работаем с текстами любой сложности и на различных языках. Наши клиенты могут быть уверены, что их заказы будут выполнены на высшем уровне, с учетом всех тонкостей и особенностей языка. Время не стоит на месте, и мы всегда следим за последними тенденциями и новыми подходами в сфере перевода.',
                     },
                     3: {
-                        title: '– PROG –',
-                        image: 'images/reason_5.webp', 
-                        description: 'УМК по программированию',
+                        title: 'Доступность для всех языков',
+                        image: 'images/reason_3.jpg', 
+                        description: 'В нашем распоряжении работают переводчики, владеющие широким спектром языков, от самых популярных мировых до редких и специализированных. Это позволяет нам удовлетворить запросы самого требовательного клиента, обеспечивая перевод в любой языковой комбинации. Мы готовы работать с текстами в самых разных сферах, будь то юридический, технический, медицинский или любой другой специализированный перевод.',
                     },
                     4: {
-                        title: 'Оперативность в работе',
-                        image: 'images/reason_5.webp', 
-                        description: 'УМК по программированию',
+                        title: 'Конфиденциальность',
+                        image: 'images/reason_4.jpg', 
+                        description: 'Мы понимаем, насколько важна конфиденциальность для наших клиентов. Все переводы выполняются с соблюдением строгих стандартов безопасности. Ваши документы, данные и информация будут защищены на всех этапах работы. Мы ценим доверие наших клиентов и принимаем все меры для того, чтобы сохранить конфиденциальность ваших материалов.',
                     }
                     
-                }
-        
+        }
+        const reasons__details = document.querySelector(".reasons__details");
+        reasons__details.innerHTML = `
+        <img class="reasons__img" src="${Data[0].image}" alt="time" width="600" height="300">
+                    <div>
+                    <h4 class="reasons__text">${Data[0].title}</h4>
+                    <p class="reasons__description">${Data[0].description}</p>
+                    </div>
+    `;
     for (let index = 0; index <reasons.length; index++)
     {
     reasons[index].addEventListener('click', (event) => {
@@ -51,9 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Клик по причине, показываем причину")
         const reasons__details = document.querySelector(".reasons__details");
         reasons__details.innerHTML = `
-        <img class="reasons__img" src="${Data[index].image}" alt="time" width="200" height="150">
+        <img class="reasons__img" src="${Data[index].image}" alt="time" width="600" height="300">
+                    <div>
                     <h4 class="reasons__text">${Data[index].title}</h4>
                     <p class="reasons__description">${Data[index].description}</p>
+                    </div>
     `;
 
     });
