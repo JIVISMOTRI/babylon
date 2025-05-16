@@ -37,4 +37,9 @@
             flex-direction: column;
             margin-left: auto;
         }
+        .reasons__img {
+            height: 150;
+
+        }
     }
+        

@@ -146,6 +146,18 @@
     justify-content: center;
     gap: 10px;
     margin-left: auto;
+    background: linear-gradient(90deg, #959a9b 0%, #727272 100%);
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(95, 111, 255, 0.08);
+}
+
+.description__buttons--calculate:hover {
+    background: linear-gradient(90deg, #727272 0%, #959a9b 100%);
+    transform: translateY(-2px) scale(1.03);
 }
 
 
@@ -215,4 +227,136 @@
     font-family: 'Mont', Arial, sans-serif;
     font-size: large;
     font-weight: 600;
+}
+
+
+
+/* Скрывает модальное окно, если у него есть атрибут hidden */
+.application[hidden] {
+    display: none !important;
+}
+
+/* Модальное окно: затемнение, центрирование, фиксированное позиционирование */
+.application {
+    position: fixed; /* фиксируем поверх всей страницы */
+    inset: 0; /* растягиваем на весь экран */
+    background: #16212699; /* плотное затемнение (цвет + прозрачность) */
+    z-index: 1000; /* поверх других элементов */
+    display: flex; /* используем flex для центрирования */
+    align-items: center; /* вертикальное центрирование */
+    justify-content: center; /* горизонтальное центрирование */
+    padding: 40px 16px; /* внутренние отступы */
+    animation: fadeIn 0.5s; /* плавное появление */
+}
+
+/* Внутренние элементы формы занимают всю ширину */
+.application > .callback,
+.application > .callback__wrap,
+.application > .callback__form {
+    width: 100%;
+}
+
+/* Контейнер формы: белый фон, скругление, тень, ограничение ширины */
+.callback {
+    background: #e0deda; /* белый фон */
+    border-radius: 18px; /* скругленные углы */
+    box-shadow: 0 8px 32px rgba(34,34,59,0.12); /* тень */
+    max-width: 420px; /* максимальная ширина */
+    width: 100%; /* на всю доступную ширину */
+    margin: 0 auto; /* центрирование по горизонтали */
+    padding: 32px 24px 16px 24px; /* внутренние отступы */
+    position: relative; /* для z-index */
+    z-index: 2; /* поверх затемнения */
+
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 500px) {
+    .callback {
+        max-width: 98vw; /* почти на всю ширину экрана */
+        padding: 18px 4vw 10px 4vw; /* уменьшенные отступы */
+    }
+}
+
+/* Анимация появления модального окна */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Центрирование и отступы для заголовка и текста формы */
+.callback__wrap {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Заголовок формы: размер, жирность, цвет, отступы */
+.callback__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #22223b; /* основной тёмный цвет текста */
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+/* Подзаголовок/текст формы: размер, цвет */
+.callback__text {
+    font-size: 1rem;
+    color: #4a4e69; /* дополнительный цвет текста */
+    margin-bottom: 0;
+}
+
+/* Форма: вертикальное расположение полей */
+.callback__form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px; /* расстояние между элементами */
+    align-items: stretch;
+}
+
+/* Поля ввода: отступы, рамка, скругление, цвет */
+.callback__input {
+    padding: 12px 16px;
+    border: 1px solid #c9c9d9; /* светлая рамка */
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    color: #22223b;
+    transition: border-color 0.2s;
+}
+
+/* Цвет рамки при фокусе на поле ввода */
+.callback__input:focus {
+    border-color: #162126; /* цвет рамки при фокусе */
+    box-shadow: 0 0 0 2px rgba(7, 10, 32, 0.2); /* тень при фокусе */
+    outline: none;
+}
+
+/* Кнопка отправки: градиент, цвет, скругление, тень, анимация */
+.callback__button {
+    background: linear-gradient(90deg, #5f6fff 0%, #48b1f3 100%); /* градиент */
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+    box-shadow: 0 2px 8px rgba(95, 111, 255, 0.08);
+}
+
+/* Кнопка при наведении: смена градиента */
+.callback__button:hover {
+    background: linear-gradient(90deg, #48b1f3 0%, #5f6fff 100%);
+}
+
+/* Примечание под формой: размер, цвет, выравнивание */
+.callback__note {
+    font-size: 0.85rem;
+    color: #9a9ab3; /* приглушённый цвет */
+    margin-top: 8px;
+    text-align: right;
+    font-weight: 400;
 }
