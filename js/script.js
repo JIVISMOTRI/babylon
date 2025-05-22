@@ -154,3 +154,60 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+const cardsCon = document.querySelector(".job");
+    if (cardsCon) {
+        const cardList = cardsCon.querySelector(".job__list");
+ 
+        // Пример URL для получения данных с сервера
+        const apiUrl = "js/data.json";
+
+         // Функция для создания карточки
+        const createCard = (
+            imageUrl,
+            iconAlt,
+            iconWidth,
+            iconHeight,
+            title,
+            description
+        ) => {
+            // Шаблонные строки и подстановки
+            const card = `
+                <li class="job__item" href="#">
+                      <img class="job__img" src="${imageUrl}" alt="${iconAlt}" width="${iconWidth}" height="${iconHeight}">
+                    <h3 class="job__title">${title}</h3>
+                    <p class="job__description">${description}</p>
+                </li>
+            `;
+            return card;
+        };
+   //СЮДА ВСТАВЬТЕ КОД ИЗ П 4. Загрузка данных с сервера
+        // Загрузка данных с сервера
+        fetch(apiUrl)
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data); // Данные
+                console.log(typeof data); // Тип полученных данных
+ 
+                data.forEach((item) => {
+                    const cardElement = createCard(
+                        item.image,
+                        item.iconAlt,
+                        item.iconWidth,
+                        item.iconHeight,
+                        item.title,
+                        item.description
+                    );
+                    cardList.insertAdjacentHTML("beforeend", cardElement);
+                });
+            })
+            .catch((error) => {
+                console.error("Ошибка при загрузке данных:", error);
+            });
+ 
+
+}
+// JS: скрыть предзагрузчик после загрузки страницы
+window.addEventListener('load', function() {
+  document.getElementById('preloader').style.display = 'none';
+});

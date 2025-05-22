@@ -44,3 +44,27 @@ color: #ffffff;
 background-color: #E0DEDA;
 color: #ffffff;
 }
+
+/* CSS: стили для предзагрузчика */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #E0DEDA99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 6px solid #959A9B;
+  border-top: 6px solid #162126;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

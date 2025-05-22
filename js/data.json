@@ -1,0 +1,26 @@
+[
+  {
+    "image": "images/job/administrator.jpg",
+    "iconAlt": "Вакансия 1",
+    "iconWidth": 387,
+    "iconHeight": 236,
+    "title": "Требуется администратор",
+    "description": "Заработная плата от 45 000 тыс.руб"
+  },
+  {
+    "image": "images/job/chinese.jpg",
+    "iconAlt": "Вакансия 2",
+    "iconWidth": 387,
+    "iconHeight": 236,
+    "title": "Требуется переводчик китайского языка",
+    "description": "Заработная плата от 60 000 тыс.руб"
+  },
+  {
+    "image": "images/job/redactor.jpg",
+    "iconAlt": "Вакансия 3",
+    "iconWidth": 387,
+    "iconHeight": 236,
+    "title": "Требуется редактор/корректор",
+    "description": "Заработная плата от 40 000 тыс.руб"
+  }
+]

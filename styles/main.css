@@ -229,6 +229,42 @@
     font-weight: 600;
 }
 
+.job {
+    margin-left: -250px;
+    justify-items: left;
+    gap: 50px;
+}
+.job__title {
+    font-family: 'PD', Arial, sans-serif;
+    font-size: large;
+    font-weight: 600;
+}
+.job__list {
+    margin-top: 30px; /*ставим в 30 пикселей отступ cверху*/
+    display: flex; /* Используем flexbox для выравнивания карточек в строку*/
+    gap: 30px;  /*  промежуток в 30 px между элементами списка*/
+    text-align: left;
+    /* justify-content: space-evenly;  */
+}
+.job__item {
+    list-style: none;
+    padding-left: 0; /* убирает отступ слева */
+    font-size: medium;
+    width: 400px; 
+    height: 350px;
+    padding: 15px; 
+    background-color: #72726a; 
+    color: #162126; 
+    box-shadow: 1px 2px 20px 5px #162126;
+}
+.job__img {
+    object-fit: contain; /*изображение вписывается в контейнер, сохраняя при этом его пропорции*/
+    height: 200px; /*высота изображения*/
+}
+
+
+
+
 
 
 /* Скрывает модальное окно, если у него есть атрибут hidden */
