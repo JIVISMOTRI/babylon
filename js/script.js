@@ -46,29 +46,50 @@ document.addEventListener("DOMContentLoaded", () => {
                     
         }
         const reasons__details = document.querySelector(".reasons__details");
-        reasons__details.innerHTML = `
-        <img class="reasons__img" src="${Data[0].image}" alt="time" width="600" height="300">
-                    <div>
-                    <h4 class="reasons__text">${Data[0].title}</h4>
-                    <p class="reasons__description">${Data[0].description}</p>
-                    </div>
-    `;
-    for (let index = 0; index <reasons.length; index++)
-    {
-    reasons[index].addEventListener('click', (event) => {
-        event.preventDefault();
-        console.log("Клик по причине, показываем причину")
-        const reasons__details = document.querySelector(".reasons__details");
-        reasons__details.innerHTML = `
-        <img class="reasons__img" src="${Data[index].image}" alt="time" width="600" height="300">
-                    <div>
-                    <h4 class="reasons__text">${Data[index].title}</h4>
-                    <p class="reasons__description">${Data[index].description}</p>
-                    </div>
-    `;
+        let currentIndex = 0; // Индекс текущего слайда
 
-    });
-}
+        // Функция для отображения слайда по индексу
+        function showSlide(index) {
+            // Добавляем класс для плавного исчезновения
+            reasons__details.classList.add('fade-out');
+
+            // Ждем окончания анимации исчезновения
+            setTimeout(() => {
+                reasons__details.innerHTML = `
+                    <img class="reasons__img" src="${Data[index].image}" alt="time" width="600" height="300">
+                    <div>
+                        <h4 class="reasons__text">${Data[index].title}</h4>
+                        <p class="reasons__description">${Data[index].description}</p>
+                    </div>
+                `;
+                // Удаляем класс fade-out и добавляем fade-in для плавного появления
+                reasons__details.classList.remove('fade-out');
+                reasons__details.classList.add('fade-in');
+            }, 300); // Задержка должна быть равна времени transition
+        }
+
+        // Функция для автоматической смены слайдов
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % Object.keys(Data).length; // Переключение на следующий слайд, зацикливание
+            showSlide(currentIndex);
+        }
+
+        // Запускаем автоматическую смену слайдов каждые 5 секунд
+        let intervalId = setInterval(nextSlide, 5000);
+
+        // Обработчики кликов по элементам списка (если нужно остановить автоматическую смену)
+        for (let index = 0; index < reasons.length; index++) {
+            reasons[index].addEventListener('click', (event) => {
+                event.preventDefault();
+                clearInterval(intervalId); // Останавливаем автоматическую смену
+                showSlide(index); // Показываем выбранный слайд
+                intervalId = setInterval(nextSlide, 5000); // Возобновляем автоматическую смену
+            });
+        }
+
+        // Показываем первый слайд при загрузке страницы
+        showSlide(currentIndex);
+
 
     console.log('Скрипт отработал корректно')
 });
