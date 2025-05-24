@@ -43,56 +43,55 @@ document.addEventListener("DOMContentLoaded", () => {
             image: 'images/reason_4.jpg',
             description: 'Мы понимаем, насколько важна конфиденциальность для наших клиентов. Все переводы выполняются с соблюдением строгих стандартов безопасности. Ваши документы, данные и информация будут защищены на всех этапах работы.',
         }
-                    
-        }
-        const reasons__details = document.querySelector(".reasons__details");
-        let currentIndex = 0; // Индекс текущего слайда
+    };
+    const reasons__details = document.querySelector(".reasons__details");
+    let currentIndex = 0; // Индекс текущего слайда
 
-        // Функция для отображения слайда по индексу
-        function showSlide(index) {
-            // Добавляем класс для плавного исчезновения
-            reasons__details.classList.add('fade-out');
+    // Функция для отображения слайда по индексу
+    function showSlide(index) {
+        // Добавляем класс для плавного исчезновения
+        reasons__details.classList.add('fade-out');
 
-            // Ждем окончания анимации исчезновения
-            setTimeout(() => {
-                reasons__details.innerHTML = `
-                    <img class="reasons__img" src="${Data[index].image}" alt="time" width="600" height="300">
-                    <div>
-                        <h4 class="reasons__text">${Data[index].title}</h4>
-                        <p class="reasons__description">${Data[index].description}</p>
-                    </div>
-                `;
-                // Удаляем класс fade-out и добавляем fade-in для плавного появления
-                reasons__details.classList.remove('fade-out');
-                reasons__details.classList.add('fade-in');
-            }, 300); // Задержка должна быть равна времени transition
-        }
+        // Ждем окончания анимации исчезновения
+        setTimeout(() => {
+            reasons__details.innerHTML = `
+                <img class="reasons__img" src="${Data[index].image}" alt="time" width="600" height="300">
+                <div>
+                    <h4 class="reasons__text">${Data[index].title}</h4>
+                    <p class="reasons__description">${Data[index].description}</p>
+                </div>
+            `;
+            // Удаляем класс fade-out и добавляем fade-in для плавного появления
+            reasons__details.classList.remove('fade-out');
+            reasons__details.classList.add('fade-in');
+        }, 300); // Задержка должна быть равна времени transition
+    }
 
-        // Функция для автоматической смены слайдов
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % Object.keys(Data).length; // Переключение на следующий слайд, зацикливание
-            showSlide(currentIndex);
-        }
-
-        // Запускаем автоматическую смену слайдов каждые 5 секунд
-        let intervalId = setInterval(nextSlide, 5000);
-
-        // Обработчики кликов по элементам списка (если нужно остановить автоматическую смену)
-        for (let index = 0; index < reasons.length; index++) {
-            reasons[index].addEventListener('click', (event) => {
-                event.preventDefault();
-                clearInterval(intervalId); // Останавливаем автоматическую смену
-                showSlide(index); // Показываем выбранный слайд
-                intervalId = setInterval(nextSlide, 5000); // Возобновляем автоматическую смену
-            });
-        }
-
-        // Показываем первый слайд при загрузке страницы
+    // Функция для автоматической смены слайдов
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % Object.keys(Data).length; // Переключение на следующий слайд, зацикливание
         showSlide(currentIndex);
+    }
+
+    // Запускаем автоматическую смену слайдов каждые 5 секунд
+    let intervalId = setInterval(nextSlide, 5000);
+
+    // Обработчики кликов по элементам списка (если нужно остановить автоматическую смену)
+    for (let index = 0; index < reasons.length; index++) {
+        reasons[index].addEventListener('click', (event) => {
+            event.preventDefault();
+            clearInterval(intervalId); // Останавливаем автоматическую смену
+            showSlide(index); // Показываем выбранный слайд
+            intervalId = setInterval(nextSlide, 5000); // Возобновляем автоматическую смену
+        });
+    }
+
+    // Показываем первый слайд при загрузке страницы
+    showSlide(currentIndex);
 
 
     console.log('Скрипт отработал корректно')
-});
+
 
     //Объявляем переменную headerMenu и сохраняем в нее header__menu
     const headerMenu = document.querySelector('.header__menu');
@@ -158,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Show application form on calculate button click
-document.addEventListener('DOMContentLoaded', function() {
+
     const calcBtn = document.querySelector('.description__buttons--calculate');
     const application = document.querySelector('.application');
     if (calcBtn && application) {
@@ -174,7 +173,48 @@ document.addEventListener('DOMContentLoaded', function() {
             if (e.key === 'Escape') application.setAttribute('hidden', '');
         });
     }
-});
+    //ИСПОЛЬЗОВАНИЕ LOCALSTORAGE задание 3.7
+    // Объявляем переменную formApplication и помещаем в нее элемент с id "formApplication"
+    const formApplication = document.querySelector("#formApplication"); 
+    // Проверяем, существует ли элемент formApplication
+    if (formApplication) {
+    // Добавляем обработчик события для отправки формы
+    formApplication.addEventListener("submit", (event) => {
+        event.preventDefault(); // Предотвращаем отправку формы
+        // Объявляем переменные "username", "tel","email",   и помещаем в нее элементы с id из формы
+        const username = formApplication.querySelector("#username").value;
+        const tel = formApplication.querySelector("#tel").value;
+        const email = formApplication.querySelector("#email").value;
+
+    // Объявляем переменную modalMessage и помещаем в нее элемент для отображения сообщений о статусе заявки
+    const modalMessage = application.querySelector("#application__message");
+    
+    // Проверка длины имени пользователя
+    if (username.length < 3) {
+        modalMessage.textContent = "Имя пользователя должно содержать не менее 3 символов";
+        modalMessage.style.color = "black"; // Устанавливаем цвет сообщения об ошибке
+        return;
+    }
+
+    // Проверка номера телефона
+    if (!/^\d{10,}$/.test(tel)) {
+        modalMessage.textContent = "Номер телефона должен содержать только цифры и быть не менее 10 символов";
+        modalMessage.style.color = "black"; // Устанавливаем цвет сообщения
+        return;
+    }
+
+    // Здесь можно добавить отправку данных на сервер
+    modalMessage.textContent = "Заявка отправлена!";
+    modalMessage.style.color = "green"; // Устанавливаем цвет сообщения для успешной отправки
+
+    // Записываем данные в localStorage
+    window.localStorage.setItem("username", username);
+    window.localStorage.setItem("tel", tel);
+    window.localStorage.setItem("email", email);
+    }); // <-- ЭТОТ КОНЕЦ ФУНКЦИИ addEventListener
+    } // <-- ЭТОТ КОНЕЦ if (formApplication)
+
+
 
     const cardsCon = document.querySelector(".job");
     if (cardsCon) {
@@ -250,3 +290,4 @@ document.addEventListener('DOMContentLoaded', function() {
             prevEl: ".swiper-button-prev",
         },
     });
+});
