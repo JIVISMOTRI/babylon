@@ -11,7 +11,6 @@
 .aside {
     margin-top: 50px;
     flex: 0 0 250px; /* Фиксированная ширина aside */
-    max-height: auto; /* Высота будет зависеть от содержимого */
 }
 .aside__search-panel {
     padding: 10px; /* Внутренние отступы */
@@ -91,6 +90,8 @@
 
 /* Стили для main */
 .main-content {
+    width: calc(100% - 250px); /* 250px — ширина aside */
+    min-width: 0; /* предотвращает переполнение */
     display: flex;
     flex-direction: column;
     margin-top: 50px;
@@ -105,6 +106,7 @@
 
 .reasons__details {
     position: relative; /* Важно для позиционирования */
+    height: 340px;
 }
 
 .fade-in {
@@ -242,13 +244,13 @@
 .us__title-office {
     display: flex;
     gap: 50px;
-    margin-left: -250px;
+
 }
 .office {
+    margin-top: 30px;
     display: flex;
     gap: 50px;
     justify-items: center;
-    margin-left: -250px;
 }
 .office__item {
     width: 400px; 
@@ -257,6 +259,10 @@
     background-color: #72726a; 
     color: #162126; 
     box-shadow: 1px 2px 20px 5px #162126;
+}
+.office__item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px 0 #162126;
 }
 .location__img {
     width: 400px;
@@ -269,10 +275,29 @@
     font-weight: 600;
 }
 
+.mySwiper {
+    margin-top: 30px;
+    width: 1000px;
+}
+.slide-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* расстояние между картинкой и текстом */
+    justify-content: center;
+}
+
+.swiper-slide__image {
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
 .job {
-    margin-left: -250px;
-    justify-items: left;
-    gap: 50px;
+    margin-top: 30px;
+
+
 }
 .job__title {
     font-family: 'PD', Arial, sans-serif;
@@ -280,17 +305,17 @@
     font-weight: 600;
 }
 .job__list {
+    list-style: none; /* Убираем стандартные маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
     margin-top: 30px; /*ставим в 30 пикселей отступ cверху*/
     display: flex; /* Используем flexbox для выравнивания карточек в строку*/
-    gap: 30px;  /*  промежуток в 30 px между элементами списка*/
-    text-align: left;
-    /* justify-content: space-evenly;  */
+    gap: 50px;  /*  промежуток в 30 px между элементами списка*/
 }
 .job__item {
+    justify-items: center;
     list-style: none;
     padding-left: 0; /* убирает отступ слева */
     font-size: medium;
-    width: 400px; 
     height: 350px;
     padding: 15px; 
     background-color: #72726a; 
@@ -301,7 +326,6 @@
     object-fit: contain; /*изображение вписывается в контейнер, сохраняя при этом его пропорции*/
     height: 200px; /*высота изображения*/
 }
-
 
 
 

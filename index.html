@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title img src='images/LOGO_no_bg.png'>BABYLON</title>
+        <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
+
 </head>
 <body>
     <!-- HTML: предзагрузчик -->
@@ -45,14 +48,7 @@
         <!-- header Navigation Menu -->
         <nav class="header__menu">
             <ul class="menu">
-                <!-- <li class="menu__item menu__item--active"><a href="#" class="menu__link">Об агентстве</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Услуги</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Цены</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Компаниям</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Частным лицам</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Доставка</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Акции</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li> -->
+                <!-- Dynamic from JS -->
             </ul>
         </nav>
     </header>
@@ -152,31 +148,60 @@
                         <p class="team__description">Переводчик</p>
                     </div>
                 </div>
-                <h3 class="us__title us__title-office">Наш офис:</h3>
-                <div class="office">
-                    <div class="office__item">
-                        <img class="location__img" src="images/team/map.png" alt="office">
-                        <p class="appearance__description">г. Йошкар-Ола, ул. Кремлевская, 44</p>
-                    </div>
-                    <div class="office__item">
-                        <img class="location__img" src="images/team/office_outside.jpg" alt="office-outside">
-                        <p class="appearance__description">Так выглядит наш офис снаружи</p>
-                    </div>
-                    <div class="office__item">
-                        <img class="location__img" src="images/team/office_inside.jpg" alt="office-inside">
-                        <p class="appearance__description">Клиентская зона</p>
-                    </div>
-                </div>
-            </section>
-            <section class="job">
-                <h2 class="job__title">Вакансии</h2>
-                <ul class="job__list">
-                    <!-- json -->
-                </ul>
-            </section>
+                
+            </section>     
         </main>
     </div>
 
+    <h3 class="us__title us__title-office container">Наш офис:</h3>
+    <section class="office container">
+        <div class="office__item">
+            <img class="location__img" src="images/team/map.png" alt="office">
+            <p class="appearance__description">г. Йошкар-Ола, ул. Кремлевская, 44</p>
+        </div>
+        <div class="office__item">
+            <img class="location__img" src="images/team/office_outside.jpg" alt="office-outside">
+            <p class="appearance__description">Так выглядит наш офис снаружи</p>
+        </div>
+        <div class="office__item">
+            <img class="location__img" src="images/team/office_inside.jpg" alt="office-inside">
+            <p class="appearance__description">Клиентская зона</p>
+        </div>
+    </section>
+    <section class="job container">
+        <h3 class="job__title">Вакансии</h3>
+        <ul class="job__list">
+            <!-- json -->
+        </ul>
+    </section>
+     <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <h3 class="swiper__title">Нам есть чем гордиться</h3>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/certificates/certificate_1.jpg" alt="certificate_1" class="swiper-slide__image" width="1000">
+                <div class="slide-caption">
+                    <h4>Сертификат 1</h4>
+                    <p>Описание или подпись к первому сертификату.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/certificates/certificate_2.jpg" alt="certificate_2" class="swiper-slide__image" width="400">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/certificates/thanks_1.jpg" alt="thanks_1" class="swiper-slide__image" width="400">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/certificates/thanks_2.jpg" alt="thanks_2" class="swiper-slide__image" width="400">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/certificates/thanks_3.jpg" alt="thanks_3" class="swiper-slide__image" width="400">
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
     <footer class="footer container">
         <p class="footer__text">© 2021 BABYLON - Translation Agency</p>
         <p class="footer__about"># Яроха Егор Евгеньевич
@@ -197,15 +222,18 @@
                 Скидка 10% при оформлении заказа в этой форме.
             </p>              
         </div>
-        <form action="/" class="callback__form">
-            <input class="callback__input" type="text" placeholder="Имя">
-            <input class="callback__input" type="tel" placeholder="Телефон*">
-            <input class="callback__input" type="email" placeholder="E-mail">
-            <button class="callback__button" href="#">Отправить заявку</button>
+        <form action="/" class="callback__form" type="button" id="formApplication">
+            <input class="callback__input" type="text" placeholder="Имя" id="username">
+            <input class="callback__input" type="tel" placeholder="Телефон*" id="tel">
+            <input class="callback__input" type="email" placeholder="E-mail" id="email">
+            <button class="callback__button" href="#" type="submit">Отправить заявку</button>
             <h6 class="callback__note">* - обязательное поле</h6>
         </form>
+        <p id="application__message" class="application__message"></p>
     </section>
 </div>
     <script src="js/script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>

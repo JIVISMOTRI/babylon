@@ -18,31 +18,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const reasons = document.querySelectorAll(".reasons__list > .reasons__list-item");
     const Data = {
         // описание причин
-                    0: {
-                        title: 'Лучшие цены на рынке',
-                        image: 'images/reason_0.jpg', 
-                        description: 'Там, где речь идет о качественном переводе, у нас нет конкурентов. Наши цены ориентированы на долгосрочное сотрудничество, а прибыль мы предпочитаем увеличивать за счет значительных оборотов.',
-                    },
-                    1: {
-                        title: 'Быстрота и точность',
-                        image: 'images/reason_1.jpg', 
-                        description: 'В нашем переводческом бюро мы понимаем, насколько важны сроки. Мы гарантируем выполнение ваших заказов точно в срок, без потери качества. Каждое слово и фраза проверяются на точность, чтобы обеспечить вам идеальный результат. Мы знаем, как важно получать точные и своевременные переводы, и именно это мы вам обеспечим',
-                    },
-                    2: {
-                        title: 'Профессионализм и опыт',
-                        image: 'images/reason_2.jpg', 
-                        description: 'Наше переводческое бюро состоит из высококвалифицированных специалистов, каждый из которых обладает богатым опытом в своей области. Мы работаем с текстами любой сложности и на различных языках. Наши клиенты могут быть уверены, что их заказы будут выполнены на высшем уровне, с учетом всех тонкостей и особенностей языка.',
-                    },
-                    3: {
-                        title: 'Доступность для всех языков',
-                        image: 'images/reason_3.jpg', 
-                        description: 'В нашем распоряжении работают переводчики, владеющие широким спектром языков, от самых популярных мировых до редких и специализированных. Это позволяет нам удовлетворить запросы самого требовательного клиента, обеспечивая перевод в любой языковой комбинации.',
-                    },
-                    4: {
-                        title: 'Конфиденциальность',
-                        image: 'images/reason_4.jpg', 
-                        description: 'Мы понимаем, насколько важна конфиденциальность для наших клиентов. Все переводы выполняются с соблюдением строгих стандартов безопасности. Ваши документы, данные и информация будут защищены на всех этапах работы.',
-                    }
+        0: {
+            title: 'Лучшие цены на рынке',
+            image: 'images/reason_0.jpg',
+            description: 'Там, где речь идет о качественном переводе, у нас нет конкурентов. Наши цены ориентированы на долгосрочное сотрудничество, а прибыль мы предпочитаем увеличивать за счет значительных оборотов.',
+        },
+        1: {
+            title: 'Быстрота и точность',
+            image: 'images/reason_1.jpg',
+            description: 'В нашем переводческом бюро мы понимаем, насколько важны сроки. Мы гарантируем выполнение ваших заказов точно в срок, без потери качества. Каждое слово и фраза проверяются на точность, чтобы обеспечить вам идеальный результат. Мы знаем, как важно получать точные и своевременные переводы, и именно это мы вам обеспечим',
+        },
+        2: {
+            title: 'Профессионализм и опыт',
+            image: 'images/reason_2.jpg',
+            description: 'Наше переводческое бюро состоит из высококвалифицированных специалистов, каждый из которых обладает богатым опытом в своей области. Мы работаем с текстами любой сложности и на различных языках. Наши клиенты могут быть уверены, что их заказы будут выполнены на высшем уровне, с учетом всех тонкостей и особенностей языка.',
+        },
+        3: {
+            title: 'Доступность для всех языков',
+            image: 'images/reason_3.jpg',
+            description: 'В нашем распоряжении работают переводчики, владеющие широким спектром языков, от самых популярных мировых до редких и специализированных. Это позволяет нам удовлетворить запросы самого требовательного клиента, обеспечивая перевод в любой языковой комбинации.',
+        },
+        4: {
+            title: 'Конфиденциальность',
+            image: 'images/reason_4.jpg',
+            description: 'Мы понимаем, насколько важна конфиденциальность для наших клиентов. Все переводы выполняются с соблюдением строгих стандартов безопасности. Ваши документы, данные и информация будут защищены на всех этапах работы.',
+        }
                     
         }
         const reasons__details = document.querySelector(".reasons__details");
@@ -94,16 +94,16 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log('Скрипт отработал корректно')
 });
 
-//Объявляем переменную headerMenu и сохраняем в нее header__menu
-const headerMenu = document.querySelector('.header__menu');
-// Если такой элемент существует
-if (headerMenu){
-//Объявляем переменную headerList и сохраняем в нее header__list, чтобы мы могли добавить новые элементы
+    //Объявляем переменную headerMenu и сохраняем в нее header__menu
+    const headerMenu = document.querySelector('.header__menu');
+    // Если такой элемент существует
+    if (headerMenu){
+    //Объявляем переменную headerList и сохраняем в нее header__list, чтобы мы могли добавить новые элементы
         const headerList = headerMenu.querySelector('.menu');
 
-//Создаем объект menuData, который содержит данные для трех ссылок меню.
+    //Создаем объект menuData, который содержит данные для трех ссылок меню.
         const menuData = {
-// Каждая ссылка содержит link (адрес ссылки; если ссылка никуда не ведет, то можно оставить #) и title (текст ссылки).
+    // Каждая ссылка содержит link (адрес ссылки; если ссылка никуда не ведет, то можно оставить #) и title (текст ссылки).
             link1: {
                 link: '#',
                 title: 'Об агентстве',
@@ -134,30 +134,30 @@ if (headerMenu){
             },
         }
 
-//Создаем функцию createLink, которая будет добавлять ссылку в меню. Внутри функции 2 переменные: UrlLink – адрес, а title — текст ссылки.
+        //Создаем функцию createLink, которая будет добавлять ссылку в меню. Внутри функции 2 переменные: UrlLink – адрес, а title — текст ссылки.
         const createLink = (UrlLink, title) =>{
-// создаем переменную  link, которая будет содержать HTML-код ссылки и вставляем в него 2 переменные
+        // создаем переменную  link, которая будет содержать HTML-код ссылки и вставляем в него 2 переменные
             const link = `
             <li class="menu__item"><a href="${UrlLink}" class="menu__link">${title}</a></li>
             `;
             return link;
         }
 
-// Создаем цикл for и проходим по всем элементам объекта menuData.
+        // Создаем цикл for и проходим по всем элементам объекта menuData.
         for (const linkItem in menuData) {
-//Получаем данные для ссылки и сохраняем в переменную link.
+        //Получаем данные для ссылки и сохраняем в переменную link.
             const link = menuData[linkItem];
-//Создаем переменную linkIndex и вызываем функцию createLink, куда передаем адрес и заголовок.
+        //Создаем переменную linkIndex и вызываем функцию createLink, куда передаем адрес и заголовок.
             const linkIndex = createLink(link.UrlLink, link.title);
-// С помощью метода insertAdjacentHTML добавляем созданный HTML-код в конец списка headerList.
+        // С помощью метода insertAdjacentHTML добавляем созданный HTML-код в конец списка headerList.
             headerList.insertAdjacentHTML('beforeend', linkIndex);
 
         }
-}
+    }
 
 
 
-// Show application form on calculate button click
+    // Show application form on calculate button click
 document.addEventListener('DOMContentLoaded', function() {
     const calcBtn = document.querySelector('.description__buttons--calculate');
     const application = document.querySelector('.application');
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-const cardsCon = document.querySelector(".job");
+    const cardsCon = document.querySelector(".job");
     if (cardsCon) {
         const cardList = cardsCon.querySelector(".job__list");
  
@@ -202,7 +202,7 @@ const cardsCon = document.querySelector(".job");
             `;
             return card;
         };
-   //СЮДА ВСТАВЬТЕ КОД ИЗ П 4. Загрузка данных с сервера
+    //СЮДА ВСТАВЬТЕ КОД ИЗ П 4. Загрузка данных с сервера
         // Загрузка данных с сервера
         fetch(apiUrl)
             .then((response) => response.json())
@@ -227,8 +227,26 @@ const cardsCon = document.querySelector(".job");
             });
  
 
-}
-// JS: скрыть предзагрузчик после загрузки страницы
-window.addEventListener('load', function() {
-  document.getElementById('preloader').style.display = 'none';
-});
+    }
+    // JS: скрыть предзагрузчик после загрузки страницы
+    window.addEventListener('load', function() {
+        document.getElementById('preloader').style.display = 'none';
+    });
+
+    // JS: инициализация Swiper
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
